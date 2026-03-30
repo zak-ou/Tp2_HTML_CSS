@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 1 - Sélecteurs & Spécificité</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-ex1">
+    <a class="back" href="../index.html">← Retour au menu</a>
+    <h1>Exercice 1 : Sélecteurs et Spécificité</h1>
+
+    <h2>1.1 Sélecteurs CSS</h2>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/" class="active">Accueil</a></li>
+        <li><a href="/about">À propos</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article class="post featured">
+        <h2>Premier article (featured)</h2>
+        <p>Premier paragraphe en italique.</p>
+        <p>Deuxième paragraphe normal.</p>
+      </article>
+      <article class="post">
+        <h2>Deuxième article</h2>
+        <p>Premier paragraphe en italique.</p>
+      </article>
+    </main>
+
+    <h2>1.2 Spécificité</h2>
+    <table class="specificity-table">
+      <tr>
+        <th>Sélecteur</th>
+        <th>Spécificité (id, class, tag)</th>
+        <th>Valeur</th>
+      </tr>
+      <tr><td>p</td><td>(0, 0, 1)</td><td>1</td></tr>
+      <tr><td>.text</td><td>(0, 1, 0)</td><td>10</td></tr>
+      <tr><td>p.text</td><td>(0, 1, 1)</td><td>11</td></tr>
+      <tr><td>#main</td><td>(1, 0, 0)</td><td>100</td></tr>
+      <tr><td>#main .text p</td><td>(1, 1, 1)</td><td>111</td></tr>
+    </table>
+
+    <div class="note">
+      <strong>Si deux règles ont la même spécificité :</strong> la dernière déclarée dans le CSS gagne (ordre de cascade).
+    </div>
+    <div class="note">
+      <strong>Pourquoi éviter !important ?</strong> Il casse la cascade naturelle du CSS, rend le code difficile à maintenir et à déboguer.
+    </div>
+  </div>
+</body>
+</html>
