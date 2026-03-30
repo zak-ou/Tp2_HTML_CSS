@@ -12,8 +12,8 @@
   --shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Thème sombre */
-[data-theme="dark"] {
+/* Thème sombre - activé via #themeSwitch:checked sans JavaScript */
+#themeSwitch:checked ~ * {
   --color-bg: #1a1a2e;
   --color-surface: #16213e;
   --color-primary: #4fc3f7;
@@ -22,6 +22,11 @@
   --color-text-muted: #aaa;
   --color-border: #333;
   --shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+#themeSwitch:checked ~ body {
+  background: #1a1a2e;
+  color: #e0e0e0;
 }
 
 * {
@@ -63,6 +68,9 @@ h2 { color: var(--color-primary); border-bottom: 2px solid var(--color-primary);
 }
 .btn:hover { background: var(--color-primary-dark); }
 
+/* Cacher la checkbox */
+.theme-input { display: none; }
+
 /* Toggle switch */
 .theme-toggle {
   display: flex;
@@ -74,8 +82,8 @@ h2 { color: var(--color-primary); border-bottom: 2px solid var(--color-primary);
   position: relative;
   width: 50px;
   height: 26px;
+  cursor: pointer;
 }
-.switch input { display: none; }
 .slider {
   position: absolute;
   inset: 0;
@@ -95,5 +103,5 @@ h2 { color: var(--color-primary); border-bottom: 2px solid var(--color-primary);
   border-radius: 50%;
   transition: transform 0.3s;
 }
-input:checked + .slider { background: var(--color-primary); }
-input:checked + .slider::before { transform: translateX(24px); }
+#themeSwitch:checked ~ * .slider { background: var(--color-primary); }
+#themeSwitch:checked ~ * .slider::before { transform: translateX(24px); }

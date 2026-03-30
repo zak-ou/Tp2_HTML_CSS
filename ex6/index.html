@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <input type="checkbox" id="themeSwitch" class="theme-input">
+
   <a class="back" href="../index.html">← Retour au menu</a>
   <h1>Exercice 6 : Variables CSS & Thèmes</h1>
 
   <div class="theme-toggle">
-    <span>☀️ Clair</span>
-    <label class="switch">
-      <input type="checkbox" id="themeSwitch">
+    <span>Clair</span>
+    <label class="switch" for="themeSwitch">
       <span class="slider"></span>
     </label>
-    <span>🌙 Sombre</span>
+    <span>Sombre</span>
   </div>
 
   <h2>Exemple de composants avec variables CSS</h2>
@@ -30,14 +31,7 @@
   <div class="card">
     <h3>Système de couleurs</h3>
     <p>Toutes les couleurs viennent des variables CSS définies dans <code>:root</code>.</p>
-    <p>Le thème sombre redéfinit ces variables dans <code>[data-theme="dark"]</code>.</p>
+    <p>Le thème sombre redéfinit ces variables dans <code>#themeSwitch:checked</code>.</p>
   </div>
-
-  <script>
-    const toggle = document.getElementById('themeSwitch');
-    toggle.addEventListener('change', () => {
-      document.documentElement.setAttribute('data-theme', toggle.checked ? 'dark' : 'light');
-    });
-  </script>
 </body>
 </html>
