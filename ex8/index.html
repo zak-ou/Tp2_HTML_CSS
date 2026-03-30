@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 8 - Quiz</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-ex8">
+    <a class="back" href="../index.html">← Retour au menu</a>
+    <h1>Exercice 8 : Quiz de révision</h1>
+
+    <!-- Question 1 -->
+    <div class="question">
+      <p>1. Quel sélecteur a la spécificité la plus haute ?</p>
+      <label class="option">
+        <input type="radio" name="q1" value="a">
+        <span class="text">.header .nav a</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option correct">
+        <input type="radio" name="q1" value="b">
+        <span class="text">#header a</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q1" value="c">
+        <span class="text">header nav a</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q1" value="d">
+        <span class="text">a.active</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+      <p>2. Avec box-sizing: border-box, un élément avec width: 200px et padding: 20px a une largeur totale de :</p>
+      <label class="option">
+        <input type="radio" name="q2" value="a">
+        <span class="text">240px</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option correct">
+        <input type="radio" name="q2" value="b">
+        <span class="text">200px</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q2" value="c">
+        <span class="text">220px</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q2" value="d">
+        <span class="text">160px</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+      <p>3. Pour centrer un élément verticalement et horizontalement avec Flexbox :</p>
+      <label class="option">
+        <input type="radio" name="q3" value="a">
+        <span class="text">justify-content: center</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q3" value="b">
+        <span class="text">align-items: center</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option correct">
+        <input type="radio" name="q3" value="c">
+        <span class="text">justify-content: center ET align-items: center</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q3" value="d">
+        <span class="text">text-align: center</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question">
+      <p>4. La valeur 1fr en CSS Grid signifie :</p>
+      <label class="option">
+        <input type="radio" name="q4" value="a">
+        <span class="text">1 pixel</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option correct">
+        <input type="radio" name="q4" value="b">
+        <span class="text">1 fraction de l'espace disponible</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q4" value="c">
+        <span class="text">1 pourcentage</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q4" value="d">
+        <span class="text">1 rem</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question">
+      <p>5. L'approche "Mobile First" utilise :</p>
+      <label class="option">
+        <input type="radio" name="q5" value="a">
+        <span class="text">max-width dans les media queries</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option correct">
+        <input type="radio" name="q5" value="b">
+        <span class="text">min-width dans les media queries</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q5" value="c">
+        <span class="text">device-width</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+      <label class="option">
+        <input type="radio" name="q5" value="d">
+        <span class="text">orientation</span>
+        <span class="feedback correct-msg">Bonne réponse</span>
+        <span class="feedback wrong-msg">Mauvaise réponse</span>
+      </label>
+    </div>
+
+  </div>
+</body>
+</html>
