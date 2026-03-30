@@ -1,0 +1,55 @@
+/* Exercice 2 - Box Model */
+
+.page-ex2 {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* content-box */
+.box-content {
+  box-sizing: content-box;
+  width: 300px;
+  padding: 20px;
+  border: 5px solid #e74c3c;
+  margin: 15px;
+  background: #fadbd8;
+}
+
+/* border-box */
+.box-border {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 20px;
+  border: 5px solid #27ae60;
+  margin: 15px;
+  background: #d5f5e3;
+}
+
+/* Centrage horizontal */
+.center-h {
+  width: 400px;
+  margin: 0 auto;
+  background: #d6eaf8;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Centrage horizontal + vertical */
+.center-container {
+  height: 200px;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.center-both {
+  width: 200px;
+  background: #a9cce3;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
