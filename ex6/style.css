@@ -1,0 +1,99 @@
+/* Exercice 6 - Variables CSS & Thèmes */
+
+/* Thème clair */
+:root {
+  --color-bg: #f9f9f9;
+  --color-surface: #ffffff;
+  --color-primary: #3498db;
+  --color-primary-dark: #2980b9;
+  --color-text: #2c3e50;
+  --color-text-muted: #666;
+  --color-border: #ddd;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Thème sombre */
+[data-theme="dark"] {
+  --color-bg: #1a1a2e;
+  --color-surface: #16213e;
+  --color-primary: #4fc3f7;
+  --color-primary-dark: #0288d1;
+  --color-text: #e0e0e0;
+  --color-text-muted: #aaa;
+  --color-border: #333;
+  --shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+* {
+  box-sizing: border-box;
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+a.back { color: var(--color-primary); }
+h1 { color: var(--color-text); }
+h2 { color: var(--color-primary); border-bottom: 2px solid var(--color-primary); padding-bottom: 5px; }
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: var(--shadow);
+}
+.card p { color: var(--color-text-muted); }
+
+.btn {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn:hover { background: var(--color-primary-dark); }
+
+/* Toggle switch */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 26px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.slider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+input:checked + .slider { background: var(--color-primary); }
+input:checked + .slider::before { transform: translateX(24px); }
