@@ -1,0 +1,90 @@
+/* Exercice 8 - Quiz (CSS only) */
+
+.page-ex8 {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.question {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.question > p {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+/* Chaque option = label cliquable */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  margin: 6px 0;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.option:hover {
+  border-color: #3498db;
+  background: #eaf4fb;
+}
+
+/* Cacher le radio natif */
+.option input[type="radio"] {
+  display: none;
+}
+
+/* Feedback caché par défaut */
+.feedback {
+  display: none;
+  font-size: 0.85rem;
+  margin-left: auto;
+}
+
+/* Quand un radio est coché : colorer le label parent */
+.option input[type="radio"]:checked ~ .text {
+  font-weight: bold;
+}
+
+/* Bonne réponse cochée → vert */
+.option.correct input[type="radio"]:checked + .text {
+  color: #1e8449;
+}
+.option.correct input[type="radio"]:checked ~ .correct-msg {
+  display: inline;
+  color: #27ae60;
+}
+
+/* Mauvaise réponse cochée → rouge */
+.option:not(.correct) input[type="radio"]:checked + .text {
+  color: #c0392b;
+}
+.option:not(.correct) input[type="radio"]:checked ~ .wrong-msg {
+  display: inline;
+  color: #e74c3c;
+}
+
+/* Bordure colorée selon résultat */
+.option.correct input[type="radio"]:checked ~ * {
+  /* handled above */
+}
+.option input[type="radio"]:checked {
+  /* trigger border via label */
+}
+
+/* Bordure du label selon résultat */
+.option.correct:has(input:checked) {
+  border-color: #27ae60;
+  background: #d5f5e3;
+}
+.option:not(.correct):has(input:checked) {
+  border-color: #e74c3c;
+  background: #fadbd8;
+}
