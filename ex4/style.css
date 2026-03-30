@@ -1,0 +1,40 @@
+/* Exercice 4 - CSS Grid */
+
+.page-ex4 {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Grille responsive */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+.grid-cards .card {
+  background: #3498db;
+  color: white;
+  padding: 30px 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Layout Grid Areas */
+.page-layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  min-height: 350px;
+}
+.header  { grid-area: header;  background: #2c3e50; color: white; padding: 20px; border-radius: 6px; text-align: center; font-weight: bold; }
+.sidebar { grid-area: sidebar; background: #8e44ad; color: white; padding: 20px; border-radius: 6px; }
+.main    { grid-area: main;    background: #ecf0f1; padding: 20px; border-radius: 6px; }
+.footer  { grid-area: footer;  background: #2c3e50; color: white; padding: 15px; border-radius: 6px; text-align: center; }
