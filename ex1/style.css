@@ -1,0 +1,82 @@
+/* Exercice 1 - Sélecteurs & Spécificité */
+
+/* 1. Tous les liens dans la navigation */
+.main-nav a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 2. Uniquement le lien actif */
+.main-nav a.active {
+  background: #e74c3c;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* 3. L'article avec la classe featured */
+article.post.featured {
+  background: #fff3cd;
+  border-left: 4px solid #f39c12;
+  padding: 15px;
+}
+
+/* 4. Le premier paragraphe de chaque article */
+article.post p:first-of-type {
+  font-style: italic;
+  color: #555;
+}
+
+/* 5. Les éléments li pairs */
+.main-nav li:nth-child(even) {
+  background: #ecf0f1;
+}
+
+/* Styles généraux nav */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+.main-nav li {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* Article */
+article.post {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Tableau spécificité */
+.specificity-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.specificity-table th,
+.specificity-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.specificity-table th {
+  background: #3498db;
+  color: white;
+}
+.specificity-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* Layout page */
+.page-ex1 {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
