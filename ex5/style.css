@@ -1,0 +1,77 @@
+/* Exercice 5 - Responsive Design Mobile First */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+}
+
+h1 { color: #2c3e50; padding: 0 20px; }
+h2 { color: #3498db; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin: 0 20px 15px; }
+
+/* Base mobile */
+.container {
+  width: 100%;
+  padding: 15px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #2c3e50;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.nav-menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+}
+.nav-menu li a:hover { background: #3498db; }
+
+.content {
+  display: block;
+  margin-top: 15px;
+}
+
+.sidebar {
+  display: none;
+  background: #8e44ad;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.main-content {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.label {
+  background: #e74c3c;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+}
+
+/* Tablette */
+@media (min-width: 600px) {
+  .nav-menu { flex-direction: row; }
+  .nav-menu li a { padding: 12px 15px; }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .content { display: flex; gap: 20px; }
+  .sidebar { display: block; width: 220px; flex-shrink: 0; }
+  .main-content { flex: 1; }
+}
