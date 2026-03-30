@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 2 - Box Model</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-ex2">
+    <a class="back" href="../index.html">← Retour au menu</a>
+    <h1>Exercice 2 : Box Model</h1>
+
+    <h2>2.1 Comprendre le Box Model</h2>
+
+    <div class="box-content">
+      <strong>box-sizing: content-box</strong><br>
+      width: 300px + padding: 20px×2 + border: 5px×2<br>
+      <strong>Largeur totale = 350px</strong>
+    </div>
+    <div class="note">content-box : largeur totale = 300 + 40 + 10 = <strong>350px</strong></div>
+
+    <div class="box-border">
+      <strong>box-sizing: border-box</strong><br>
+      width: 300px (tout inclus)<br>
+      <strong>Largeur totale = 300px</strong>
+    </div>
+    <div class="note">border-box : largeur totale = <strong>300px</strong> (padding et border inclus)</div>
+
+    <h2>Reset CSS universel</h2>
+    <pre>*, *::before, *::after {
+  box-sizing: border-box;
+}</pre>
+
+    <h2>2.2 Centrer un élément</h2>
+    <p><strong>Centrage horizontal</strong> (margin: 0 auto) :</p>
+    <div class="center-h">Je suis centré horizontalement</div>
+
+    <p><strong>Centrage horizontal ET vertical</strong> (Flexbox) :</p>
+    <div class="center-container">
+      <div class="center-both">Je suis centré dans les deux axes</div>
+    </div>
+
+    <pre style="margin-top:15px">/* Centrage horizontal */
+.element {
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* Centrage horizontal + vertical */
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}</pre>
+  </div>
+</body>
+</html>
