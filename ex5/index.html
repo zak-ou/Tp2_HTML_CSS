@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 5 - Responsive Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="back" href="../index.html" style="margin-left:15px">← Retour au menu</a>
+  <h1>Exercice 5 : Responsive Design (Mobile First)</h1>
+
+  <div class="container">
+    <h2>Navigation <span class="label">Redimensionnez la fenêtre !</span></h2>
+    <ul class="nav-menu">
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="content">
+      <aside class="sidebar">
+        <h3 style="margin-top:0">Sidebar</h3>
+        <p>Visible uniquement sur desktop (≥ 900px)</p>
+      </aside>
+      <div class="main-content">
+        <h3>Contenu principal</h3>
+        <p> Mobile : navigation verticale, sidebar cachée.</p>
+        <p>Tablette (>600px) : navigation horizontale.</p>
+        <p>Desktop (>900px) : sidebar visible, layout en colonnes.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
